@@ -1,6 +1,6 @@
 :root {
-  --color-text: #999;
-  --color-text-dimmed: #666;
+  --color-text: #ffffff;
+  --color-text-dimmed: #ffffff;
   --color-text-bright: #fff;
   --color-background: #000;
   --font-primary: "Roboto Condensed";
@@ -35,7 +35,7 @@ body {
   position: absolute;
   height: calc(100% - var(--gap-body-top) - var(--gap-body-bottom));
   width: calc(100% - var(--gap-body-right) - var(--gap-body-left));
-  background: var(--color-background);
+  background-image: linear-gradient(to bottom right, var(--gradiant-color-1), var(--gradiant-color-2));
   color: var(--color-text);
   font-family: var(--font-primary), sans-serif;
   font-weight: 400;
@@ -190,10 +190,18 @@ sup {
   transform: translateX(-50%);
 }
 
-.region.top.right,
-.region.top.left,
+.region.top.right {
+  top: 100%;
+  right: 3%;
+}
+
 .region.top.center {
   top: 100%;
+}
+
+.region.top.left {
+  top: 100%;
+  left: 3%;
 }
 
 .region.bottom {
