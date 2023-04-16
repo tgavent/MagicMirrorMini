@@ -54,19 +54,7 @@ let config = {
 				lat: 28.039465,
 				lon: -81.949806,
 				displayType: "both",
-			}
-		},
-		{
-			module: "calendar",
-			header: "US Holidays",
-			position: "top_center",
-			config: {
-				calendars: [
-					{
-						symbol: "calendar-check",
-						url: "webcal://www.calendarlabs.com/ical-calendar/ics/76/US_Holidays.ics"
-					}
-				]
+				analogSize: "100px",
 			}
 		},
 		{
@@ -109,6 +97,17 @@ let config = {
 				broadcastNewsFeeds: true,
 				broadcastNewsUpdates: true
 			}
+		},
+		{
+			module: 'MMM-SystemStats',
+			position: 'top_center',
+			config: {
+				updateInterval: 10000, // every 10 seconds
+				align: 'right', // align labels
+				//header: 'System Stats',
+				units: 'metric', // default, metric, imperial
+				view: 'textAndIcon',
+			},
 		},
 	]
 };
